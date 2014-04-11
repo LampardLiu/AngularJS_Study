@@ -8,6 +8,7 @@ timeLine.controller('getData',['$scope','$http',function($scope,$http) {
   $http.get('json.txt').success(function(data) {
     $scope.dataInfo = data;
     $scope.timeLineWidth = data.length * 80;
+    $scope.timeLineHeight = data.length * 46;
   });
 }]).controller('getTemplate',['$scope','$http',function($scope,$http) {
   $scope.minTimeLineTemplate = function() {
@@ -41,10 +42,10 @@ timeLine.directive('pop',function($document,$window) {
 });
 
 //这里这样命名是为了避免AngularJS的驼峰分割
-timeLine.directive('mintimelinenav',['$document','$window',function($document,$window) {
+//横向的minTimeLine
+timeLine.directive('mintimelinenavH',['$document','$window',function($document,$window) {
   return {
     restrict: 'EA',
-    scope: { datas: '=dataInfos'},
     template: '<div ng-controller="getData">'
               + '<ol>' 
               + '<li class="nav-year" ng-repeat="data in dataInfo">'
@@ -52,7 +53,23 @@ timeLine.directive('mintimelinenav',['$document','$window',function($document,$w
               + '<div class="pin"></div>'
               + '</li>'
               + '</ol>'
-              + '<div class="line-h line" style="width: {{timeLineWidth}}px"></div>'
+              + '<div class="line-h" style="width: {{timeLineWidth}}px"></div>'
+              + '</div>'
+  };
+}]);
+
+//竖的minTimeLine
+timeLine.directive('mintimelinenavV',['$document','$window',function($document,$window) {
+  return {
+    restrict: 'EA',
+    template: '<div ng-controller="getData">'
+              + '<ol style="float:left">'
+              + '<li class="nav-year-v" ng-repeat="data in dataInfo">'
+              + '<div class="year-v" pop>{{data.year}}</div>'
+              + '<div class="pin-v"></div>'
+              + '</li>'
+              + '</ol>'
+              + '<div class="line-v" style="height: {{timeLineHeight}}px"></div>'
               + '</div>'
   };
 }]);

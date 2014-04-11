@@ -32,9 +32,10 @@ ol {
 .line-v {
   background: #aaa;
   width: 4px;
-  height: 100%;
+  height: auto;  
   opacity: .8;
   border-radius: 2px;
+  float: left;
 }
 
 .minmap {
@@ -87,7 +88,18 @@ ol {
   cursor: pointer;
 }
 
-.nav-year:hover {
+.nav-year-v {
+  width: auto;
+  height: 20px;
+  color: #666;
+  margin: 15px 0;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-year:hover,
+.nav-year-v:hover {
   background: #ddd;
 }
 
@@ -99,12 +111,22 @@ ol {
   margin: 0 auto;
 }
 
+.pin-v {
+  background: #aaa;
+  border-radius: 50%;
+  height: 4px;
+  width: 6px;
+  line-height: 30px;
+  float: left;
+  margin-top: 8px;
+}
+
 .pop-info {
   background: #fff;
   border: solid 1px #00f;
   display: none;
-  height: 80px;
-  width: 120px;
+  height: auto;
+  width: 130px;
   position: absolute;
   overflow: hidden;
   color: #00f;
@@ -124,4 +146,9 @@ ol {
   height: 200px;
   width: 800px;
   margin-left: 200px;
+}
+
+.year-v {
+  float: left;
+  padding: 0 5px;
 }
