@@ -1,0 +1,22 @@
+https://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html
+
+Below are some resource on database design, which you need to read in your plan(not now):
+
+Basic:
+http://www.datanamic.com/support/lt-dez005-introduction-db-modeling.html
+
+Database Naming Rules:
+http://databases.about.com/od/specificproducts/a/Database-Naming-Rules.htm
+
+Normalization:
+http://databases.about.com/od/specificproducts/a/Should-I-Normalize-My-Database.htm
+http://databases.about.com/od/specificproducts/a/normalization.htm
+
+Choosing Primary Key:
+http://databases.about.com/od/specificproducts/a/primarykey.htm
+
+Common Mistakes:
+http://databases.about.com/gi/o.htm?zi=1/XJ&zTi=1&sdn=databases&cdn=compute&tm=243&f=00&tt=14&bt=4&bts=4&zu=http%3A//www.simple-talk.com/sql/database-administration/ten-common-database-design-mistakes/
+
+ERD:
+http://databases.about.com/od/specificproducts/l/blentity-relationship-diagrams.htm
