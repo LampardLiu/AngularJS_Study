@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="demoApp" ng-controller="demoList">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script src="lib/angular/angular.js" charset="utf-8"></script>
+    <script src="js/demo.js" charset="utf-8"></script>
+    <title>{{demoTitle}}</title>
+  </head>
+  <body>
+    <div class="warpper">
+      <h1>This is a demo of AngularJS</h1>
+      <ol>
+        <li ng-repeat="demo in demoList"><a href="{{demo.url}}">{{demo.dis}}</a></li>
+      </ol>
+      <!--这里用到的是过滤器-->
+      <span>当前总共存在&nbsp;{{demoList.length|number:1}}&nbsp;个例子</span>
+    </div>
+  </body>
+</html>

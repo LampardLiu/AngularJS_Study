@@ -1,0 +1,19 @@
+body,
+div,
+ol,
+li  {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #efeeff;
+  width: 100%;
+  height: auto;
+}
+
+.warpper {
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
