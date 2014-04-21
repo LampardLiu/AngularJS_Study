@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+  <head>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../lib/angular/angular.js" charset="utf-8"></script>
+    <script src="../lib/angular/angular-route.js" charset="utf-8"></script>
+    <script src="../js/demo.js" charset="utf-8"></script>
+    <script src="../js/route/routeDemo.js" charset="utf-8"></script>
+   <title>This is a demo of AngularJS's Http ect</title>
+  </head>
+  <body ng-controller="dataRead">
+    <div class="warpper">
+      <h1>This is a demo of AngularJS's Http ect</h1>
+      Search:<input type="search" ng-model="query" />
+      OrderBy:<select ng-model="order">
+        <option value="age" selected="true">age</option>
+        <option value="name">name</option>
+      </select>
+      <div ng-repeat="guy in dataList | filter: query | orderBy: order">
+        <p>Name:{{guy.name}}</p> 
+        <p>Age:{{guy.age}}</p>
+        <p>Dad:{{guy.dad}}</p>
+        <hr>
+      </div>
+    </div>
+  </body>
+</html>
