@@ -1,7 +1,7 @@
 git（ubuntu）学习日志：
 1.sudo apt-get install git  安装
 2.https://help.github.com/articles/set-up-git 跟着这个操作
-3.
+3.http://blog.csdn.net/banxi1988/article/details/6555293 创建ssh
 4.https://help.github.com/articles/create-a-repo 创建版本库
 5.https://help.github.com/articles/fork-a-repo  fork一个，并且clone；
 
