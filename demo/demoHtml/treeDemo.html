@@ -35,8 +35,8 @@
         <li>RootThree</li>
       </ol>
       <hr>
-      <ul ng-app="myApp" ng-controller="TreeController">
-        <li ng-repeat="data in tree" ng-include="'test.html'"></li>
+      <ul ng-app="myApp" ng-controller="TreeController">{{templetHtml}}
+        <li ng-repeat="data in tree" ng-include="templetHtml"></li>
       </ul>
     </div>
   </body>
