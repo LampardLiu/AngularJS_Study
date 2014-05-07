@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="demoDirectiveApp">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/layout.css" charset="utf-8">
+    <link rel="stylesheet" href="../css/index.css" charset="utf-8">
+    <link rel="stylesheet" href="../css/base.css" charset="utf-8">
+    <link rel="stylesheet" href="../css/spellImage.css" charset="utf-8">
+    <script src="../lib/angular/angular.js" charset="utf-8"></script>
+    <script src="../js/demo.js" charset="utf-8"></script>
+    <script src="../js/directives/dragDirective.js" charset="utf-8"></script>
+   <title>{{demoTitle}}</title>
+   <script>
+      window.onload = function() {
+        if(document.readyState === 'complete') {
+          var tableBoard = document.getElementsByTagName('table')[0];
+          var rows = document.getElementsByTagName('tr');
+          var column = document.getElementsByTagName('td').length / rows.length;
+          for(i = 0, len = rows.length; i < len; i++) {
+            for(j = 0; j < column; j++) {
+              tableBoard.rows[i].cells[j].childNodes[1].setAttribute('style',tableBoard.rows[i].cells[j].childNodes[1].getAttribute('style') + 'background-position: ' + j*(-132) + 'px ' + i*(-124) + 'px');
+            }
+          }
+        }
+      }
+   </script>
+  </head>
+  <body>
+  <div class="warpper" ng-controller="spileImage">
+    <h1>This is a demo of AngularJS's directives</h1>
+    <input type="button" ng-click="loadImage('board')" value="LoadImage"/>
+    <div id="board">   
+      <table>
+        <tr ng-repeat="yposition in [0,1,2]">
+          <td ng-repeat="xposition in [0,1,2]">
+            <div dragable style="background:url('../img/spellImage_1.png') no-repeat;width: 132px;height:124px; "></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </body>
+</html>

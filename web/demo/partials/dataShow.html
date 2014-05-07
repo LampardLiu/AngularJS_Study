@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="demoRouteApp">
+  <head>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../lib/angular/angular.js" charset="utf-8"></script>
+    <script src="../lib/angular/angular-route.js" charset="utf-8"></script>
+    <script src="../js/Demo.js" charset="utf-8"></script>
+    <script src="../js/route/routeDemo.js" charset="utf-8"></script>
+   <title>This is a demo of AngularJS's Http</title>
+  </head>
+  <body ng-controller="dataRead">
+    <div class="warpper">
+      <h1>This is a demo of AngularJS's Http</h1>
+      <div ng-repeat="guy in dataList">
+        <p>Name:{{guy.name}}</p>
+        <p>Age:{{guy.age}}</p>
+        <p>Dad:{{guy.dad}}</p>
+      </div>
+    </div>
+  </body>
+</html>
